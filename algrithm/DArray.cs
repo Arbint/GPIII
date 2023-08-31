@@ -1,8 +1,9 @@
-﻿using System.ComponentModel;
+﻿using System.Collections;
+using System.ComponentModel;
 
 namespace algrithm
 {
-    internal class DArray<T>
+    internal class DArray<T> : IEnumerable<T> // : IEnumerable<T> means the Darray is Enumerable now given that it implement this interface
     {
         public DArray()
         {
@@ -21,12 +22,6 @@ namespace algrithm
             }
         }
 
-        private T Get(int index)
-        {
-            EnsureRange(index);
-            return mData[index];
-        }
-
         public void Add(T newItem)
         {
             if(mSize == mData.Length) // are we reaching to the maximum capacity of the internal array?
@@ -38,11 +33,16 @@ namespace algrithm
             ++mSize;
         }
 
-        public void Set(T newItem, int index)
+        private void Set(T newItem, int index)
         {
             EnsureRange(index);
             mData[index] = newItem;
 
+        }
+        private T Get(int index)
+        {
+            EnsureRange(index);
+            return mData[index];
         }
 
         private void EnsureRange(int index)
@@ -66,6 +66,16 @@ namespace algrithm
             
             //make mData = the new list
             mData = newArray;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return mData.GetEnumerator();
         }
 
         static private readonly int INITIAL_SIZE = 10;
