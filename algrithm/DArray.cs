@@ -68,6 +68,8 @@ namespace algrithm
             {
                 newArray[i] = mData[i];
             }
+
+            //mData.CopyTo( newArray, 0 );
             
             //make mData = the new list
             mData = newArray;
@@ -75,7 +77,12 @@ namespace algrithm
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new DArrayEnumerator<T>(this);
+            int index = -1;
+            while(index < mSize)
+            {
+                ++index;
+                yield return mData[index];
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -86,40 +93,5 @@ namespace algrithm
         static private readonly int INITIAL_SIZE = 10;
         private T[] mData;
         private int mSize;
-    }
-
-    class DArrayEnumerator<T> : IEnumerator<T>
-    {
-        private DArray<T> mOwner;
-        private int mIndex;
-        public DArrayEnumerator(DArray<T> owner)
-        {
-            mOwner = owner;
-            mIndex = -1;
-        }
-
-        public T Current => mOwner[mIndex];
-
-        object IEnumerator.Current => mOwner[mIndex];
-
-        public void Dispose()
-        {
-            //if yours handles online connects, file stream, you clean them up here.
-        }
-
-        public bool MoveNext()
-        {
-            if(mIndex < mOwner.Size - 1)
-            {
-                mIndex++;
-                return true;
-            }
-            return false;
-        }
-
-        public void Reset()
-        {
-            mIndex = -1;
-        }
     }
 }
