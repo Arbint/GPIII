@@ -11,6 +11,11 @@ namespace algrithm
             mSize = 0; // the size of the array starts with 0. mSize also indicates the next avaliable slot to add a new element.
         }
 
+        public int Size
+        {
+            get { return mSize; }
+        }
+
         public T this[int index]
         {
             get
@@ -81,5 +86,40 @@ namespace algrithm
         static private readonly int INITIAL_SIZE = 10;
         private T[] mData;
         private int mSize;
+    }
+
+    class DArrayEnumerator<T> : IEnumerator<T>
+    {
+        private DArray<T> mOwner;
+        private int mIndex;
+        public DArrayEnumerator(DArray<T> owner)
+        {
+            mOwner = owner;
+            mIndex = -1;
+        }
+
+        public T Current => mOwner[mIndex];
+
+        object IEnumerator.Current => mOwner[mIndex];
+
+        public void Dispose()
+        {
+            //if yours handles online connects, file stream, you clean them up here.
+        }
+
+        public bool MoveNext()
+        {
+            if(mIndex < mOwner.Size)
+            {
+                mIndex++;
+                return true;
+            }
+            return false;
+        }
+
+        public void Reset()
+        {
+            mIndex = -1;
+        }
     }
 }
