@@ -1,0 +1,15 @@
+C:\Users\jili1\source\repos\algrithm\algrithm\bin\Debug\net6.0\algrithm.exe
+C:\Users\jili1\source\repos\algrithm\algrithm\bin\Debug\net6.0\algrithm.deps.json
+C:\Users\jili1\source\repos\algrithm\algrithm\bin\Debug\net6.0\algrithm.runtimeconfig.json
+C:\Users\jili1\source\repos\algrithm\algrithm\bin\Debug\net6.0\algrithm.dll
+C:\Users\jili1\source\repos\algrithm\algrithm\bin\Debug\net6.0\algrithm.pdb
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.csproj.AssemblyReference.cache
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.AssemblyInfoInputs.cache
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.AssemblyInfo.cs
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.csproj.CoreCompileInputs.cache
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.dll
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\refint\algrithm.dll
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.pdb
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\algrithm.genruntimeconfig.cache
+C:\Users\jili1\source\repos\algrithm\algrithm\obj\Debug\net6.0\ref\algrithm.dll
