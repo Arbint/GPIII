@@ -75,7 +75,7 @@ namespace algrithm
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return new DArrayEnumerator<T>(this);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -109,7 +109,7 @@ namespace algrithm
 
         public bool MoveNext()
         {
-            if(mIndex < mOwner.Size)
+            if(mIndex < mOwner.Size - 1)
             {
                 mIndex++;
                 return true;
